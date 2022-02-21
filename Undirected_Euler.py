@@ -1,3 +1,5 @@
+#This program draws the graph of the given knots and edges, checks wheter a Euler Circuit is possible and if so returns a possible Euler-Path
+
 import time
 
 import numpy as np
@@ -114,13 +116,6 @@ class Graph:
         plt.show()
         g.clear()
 
-    def executionTime(self):
-        t_start = time.process_time()
-        self.findEuler()
-        t_stop = time.process_time()
-        execution_time = t_stop - t_start
-        return execution_time
-
 def main():
     G1 = Graph(3)
 
@@ -150,10 +145,10 @@ def main():
 
     # Find Euler Circle
 
-    print("G1:", G1.findEuler(), " | Execution Time:", G1.executionTime())
-    print("G2:", G2.findEuler(), " | Execution Time:", G2.executionTime())
-    print("G3:", G3.findEuler(), " | Execution Time:", G2.executionTime())
-    print("G3:", G3.findEuler(), " | Execution Time:", G2.executionTime())
+    print("G1:", G1.findEuler())
+    print("G2:", G2.findEuler())
+    print("G3:", G3.findEuler())
+    print("G3:", G3.findEuler())
 
     # Plot Graph
     G1.drawGraph()
