@@ -1,6 +1,4 @@
-#This program draws the graph of the given knots and edges, checks wheter a Euler Circuit is possible and if so returns a possible Euler-Path
-
-import time
+#This program draws the graph of the given knots and edges, checks whether a Euler Circuit is available and if so returns a possible Euler-Path
 
 import numpy as np
 import random as rd
