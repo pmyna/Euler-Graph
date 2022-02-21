@@ -1,3 +1,10 @@
+"""
+* Undirected Euler Circuit
+*
+* Created: 02-2022
+* Author: pmyna
+"""
+
 #This program draws the graph of the given knots and edges, checks whether a Euler Circuit is available and if so returns a possible Euler-Path
 
 import numpy as np
