@@ -3,7 +3,6 @@ import random as rd
 import networkx as nx
 import matplotlib.pyplot as plt
 
-
 class Graph:
     def __init__(self, k):
         self.knots = k
@@ -108,5 +107,5 @@ class Graph:
         plot = nx.Graph()
         plot.add_edges_from(self.edges)
         nx.draw_networkx(plot, with_labels=True, node_color = "#ffffff", node_size=350, edge_color="#5f95ed", width=1.5)
-        plt.show()
+        return plt.plot()
         plot.clear()
