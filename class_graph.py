@@ -1,12 +1,3 @@
-"""
-* Undirected Euler Circuit
-*
-* Created: 02-2022
-* Author: pmyna
-"""
-
-#This program draws the graph of the given knots and edges, checks whether a Euler Circuit is available and if so returns a possible Euler-Path
-
 import numpy as np
 import random as rd
 import networkx as nx
@@ -42,7 +33,6 @@ class Graph:
         return True
 
     def isUnique(self, np_cedges):
-
         *y, = map(list, {*map(tuple, np_cedges)})
         if len(np_cedges) == len(y):
             return True
@@ -115,51 +105,8 @@ class Graph:
             return "No Euler Circle found"
 
     def drawGraph(self):
-        g = nx.Graph()
-        g.add_edges_from(self.edges)
-        nx.draw_networkx(g, with_labels=True, node_color = "#ffffff", node_size=350, edge_color="#5f95ed", width=1.5)
+        plot = nx.Graph()
+        plot.add_edges_from(self.edges)
+        nx.draw_networkx(plot, with_labels=True, node_color = "#ffffff", node_size=350, edge_color="#5f95ed", width=1.5)
         plt.show()
-        g.clear()
-
-def main():
-    G1 = Graph(3)
-
-    G1.addEdge(1, 2)
-    G1.addEdge(1, 3)
-    G1.addEdge(2, 3)
-
-    G2 = Graph(4)
-
-    G2.addEdge(1, 2)
-    G2.addEdge(2, 3)
-    G2.addEdge(1, 3)
-    G2.addEdge(3, 4)
-
-    G3 = Graph(6)
-
-    G3.addEdge(1, 2)
-    G3.addEdge(2, 3)
-    G3.addEdge(1, 3)
-    G3.addEdge(2, 4)
-    G3.addEdge(3, 5)
-    G3.addEdge(4, 6)
-    G3.addEdge(5, 6)
-    G3.addEdge(2, 5)
-    G3.addEdge(3, 4)
-    G3.addEdge(4, 5)
-
-    # Find Euler Circle
-
-    print("G1:", G1.findEuler())
-    print("G2:", G2.findEuler())
-    print("G3:", G3.findEuler())
-    print("G3:", G3.findEuler())
-
-    # Plot Graph
-    G1.drawGraph()
-    G2.drawGraph()
-    G3.drawGraph()
-
-
-if __name__ == '__main__':
-    main()
+        plot.clear()
