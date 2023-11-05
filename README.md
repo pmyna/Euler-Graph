@@ -1,7 +1,7 @@
 # Undirected Euler Circuit
-Created: 02-2022
+Author: pmyna\
+Created: 02-2022\
 Last Update: 11-2023
-Author: pmyna
 
 ## About
 
